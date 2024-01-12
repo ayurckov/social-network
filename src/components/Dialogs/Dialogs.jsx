@@ -15,7 +15,7 @@ const Dialogs = (props) => {
     ]
 
     let messagesData = [
-        {message: 'Hi', id: 1},
+        {message: 'Sup!', id: 1},
         {message: 'What are you doing right now?', id: 2},
         {message: 'See again', id: 3},
     ]
