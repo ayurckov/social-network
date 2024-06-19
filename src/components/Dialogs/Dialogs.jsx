@@ -9,6 +9,13 @@ const Dialogs = (props) => {
 
     let messagesElements = props.messagesData.map((el) => <Message message={el.message} /> )
 
+    let newMessageElement = React.createRef();
+
+    let addMessages = () => {
+      let text = newMessageElement.current.value;
+      alert(text);
+    }
+
   return (
     <div className={stylles.dialogs}>
       <div className={stylles.dialogsItems}>
@@ -18,8 +25,13 @@ const Dialogs = (props) => {
       </div>
       <div className={stylles.messages}>
         {messagesElements}
-
+        
+        <textarea ref={ newMessageElement } cols="30" rows="10"></textarea>
+        <div className="addMessage">
+        <button onClick={ addMessages }>add</button>
+        </div>
       </div>
+      
     </div>
   );
 };
